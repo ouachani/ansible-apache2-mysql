@@ -1,0 +1,26 @@
+- name: Copy file showData.php to remote host
+  copy:
+    src: files/showData.php
+    dest: /var/www/html
+    owner: ansible
+    mode: 0755
+
+- name: Copy file insertData.php to remote host
+  copy:
+    src: files/insertData.php
+    dest: /var/www/html/
+    owner: ansible
+    mode: 0755
+
+- name: Copy file createTableData.php to remote host
+  copy:
+    src: files/createTable.php
+    dest: /var/www/html/
+    owner: ansible
+    mode: 0755
+
+
+
+
+
+

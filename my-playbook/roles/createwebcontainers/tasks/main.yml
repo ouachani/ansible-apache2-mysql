@@ -1,0 +1,29 @@
+---
+- name: Create Container Web1
+  docker_container:
+    name: Web1
+    image: "{{ image }}"
+    ports:
+      - "8000:{{ dest_port }}"
+      - 22
+#    volumes:
+#      - "{{ src_vol }}/web1:{{ dest_vol }}"
+    privileged: "{{ privileged }}"
+#  with_items:
+#    - Web1
+    
+
+
+- name: Create Container Web2
+  docker_container:
+    name: Web2
+    image: "{{ image }}"
+    ports:
+      - "8001:{{ dest_port }}"
+      - 22
+#    volumes:
+#      - "{{ src_vol }}/web2:{{ dest_vol }}"
+    privileged: "{{ privileged }}"
+#  with_items:
+#    - Web1
+#    - Web2

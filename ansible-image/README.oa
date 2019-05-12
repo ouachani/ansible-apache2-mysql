@@ -1,0 +1,11 @@
+#### build image
+
+```
+$ docker build -t="aouachani/ansible-centos7:latest" .
+```
+
+#### run a default contaier
+
+```
+$ docker run -dit --name ansible-c aouachani/ansible-centos7:latest
+```

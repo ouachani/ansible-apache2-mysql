@@ -1,0 +1,34 @@
+# CentOS6-MySql
+
+Perform the build
+
+    # docker build -rm -t aouachani/mysql-centos6:latest .
+
+Check the image out.
+
+    # docker images
+
+Run it:
+
+    # docker run -dit --name mysqldb -p 3306:3306 aouachani/mysql-centos6:latest
+
+Get container ID:
+
+    # docker ps
+
+Keep in mind the password set for MySQL is: mysqlPassword
+
+Get the IP address for the container:
+
+    # docker inspect <container_id> | grep -i ipaddr
+
+For MySQL:
+    # mysql -h 172.17.0.x -uuserdb -pmydb
+
+
+Create a table:
+
+```
+\> CREATE TABLE test (name VARCHAR(10), owner VARCHAR(10),
+    -> species VARCHAR(10), birth DATE, death DATE);
+```

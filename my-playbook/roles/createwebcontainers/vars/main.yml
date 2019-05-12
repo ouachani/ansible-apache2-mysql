@@ -1,0 +1,4 @@
+#image: aouachani/httpd-centos7:latest
+image: aouachani/apache2-centos7:latest
+dest_port: 80
+privileged: true

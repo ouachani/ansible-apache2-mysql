@@ -1,0 +1,3 @@
+mysqldb_image: aouachani/mysql-centos6:latest 
+mysqldb_name: mysqldb
+privileged: true

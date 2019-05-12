@@ -1,0 +1,35 @@
+# Abdelkader OUACHANI
+
+# Copie my-playbook to the ansible container
+
+$ docker cp my-playbook ANSIBLE_CONTAINER_ID:/home
+
+# Create MySql container using ansible-playbook
+
+$ docker exec -it ANSIBLE_CONTAINER_ID ansible-playbook /home/create_db_container.yml -vvv
+
+# Create 2 Apache2 containers using ansible-playbook
+
+$ docker exec -it ANSIBLE_CONTAINER_ID ansible-playbook /home/create_web_container.yml -vvv
+
+# Deploy php application using ansible-playbook
+
+$  docker exec -it ANSIBLE_CONTAINER_ID ansible-playbook /home/webservers.yml -vvv
+
+# Test Create a Table in MySqlDB with web application
+
+App1  :   http://localhost:8000/createTable.php
+
+# Test Insert Data in MySqlDB with web application
+
+App2  :   http://localhost:8001/insertData.php
+
+# Test show Data in web application
+
+App1  :   http://localhost:8000:/showData.php
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+# VERY IMPORTANT : Do not forget to overwrite the inventory with your @IP #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+

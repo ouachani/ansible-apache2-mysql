@@ -1,0 +1,15 @@
+# Create Ansible image/container
+
+$ cat ansible-image/README.oa
+
+# Create Apache2 image
+
+$ cat mysql-image/README.oa
+
+# Create MySql image
+
+$ cat apache2-image/README.oa
+
+# Deploy PHP/MySql application with ansible-playbook
+
+$ cat my-playbook/README.oa

@@ -1,0 +1,29 @@
+# dockerfiles-centos-apache2-httpd
+
+CentOS Dockerfile for Apache httpd
+
+
+## Build
+
+Copy the sources down and do the build
+
+```
+# docker build --rm -t aouachani/apache2-centos7 .
+```
+
+## Usage
+
+To run (if port 8080 is available and open on your host):
+
+```
+# docker run -dit --name mysqldb -p 8080:80 -p 22 aouachani/apache2-centos7
+```
+
+# docker ps
+```
+
+## Test
+
+```
+# curl http://localhost:8080
+```

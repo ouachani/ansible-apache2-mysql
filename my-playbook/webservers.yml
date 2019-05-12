@@ -1,0 +1,7 @@
+---
+- hosts: webservers
+  sudo: yes
+  name: Deploy a simple application 
+  gather_facts: no
+  roles:
+  - webservers

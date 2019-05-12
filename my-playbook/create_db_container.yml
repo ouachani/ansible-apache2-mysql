@@ -1,0 +1,7 @@
+---
+- hosts: mynode
+  sudo: yes
+  name: Create a mysql db container
+  gather_facts: no
+  roles:
+  - createdbcontainer

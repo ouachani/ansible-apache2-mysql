@@ -1,0 +1,10 @@
+---
+- name: Create Container MySql DB
+  docker_container:
+    name: "{{ mysqldb_name }}"
+    image: "{{ mysqldb_image }}"
+    ports:
+      - "3306:3306"
+    privileged: "{{ privileged }}"
+    
+
